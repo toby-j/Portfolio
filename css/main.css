@@ -11,10 +11,63 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+
 html {
-  color: #222;
-  font-size: 1em;
+  color: #f6f7f9;
+  font-size: 1.2em;
   line-height: 1.4;
+  font-family: Gotham, sans-serif;
+}
+
+p {
+  margin: 3px;
+}
+
+h2 {
+  font-family: "Gotham Thin", sans-serif;
+  letter-spacing: 1px;
+  font-size: 1.2em;
+}
+
+hr.new4 {
+  margin-left: 5px;
+  margin-right: 5px;
+  background-color: white;
+  border-color: white;
+}
+
+.img-profile {
+  max-width: 11rem;
+  max-height: 11rem;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 5px;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.main-container {
+  padding: 100px;
+}
+
+body {
+  background-color: #22272e;
 }
 
 /*
