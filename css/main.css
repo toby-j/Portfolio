@@ -74,6 +74,11 @@ p {
   max-height: 80px;
 }
 
+.tech-icon-con {
+  width: 400px;
+  margin: 15px;
+}
+
 .arrowBullets ul li:before{
   content: '';
   position: absolute;
@@ -205,6 +210,12 @@ hr.new4 {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
+}
+
+.tech-icons-flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .main-container {
