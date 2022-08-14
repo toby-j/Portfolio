@@ -18,7 +18,6 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-
   <meta name="theme-color" content="#fafafa">
 </head>
 
@@ -28,35 +27,164 @@
     <div class="flex-col" style="margin-top: 2%">
       <h1 style="margin-bottom: 30px">Toby Johnson</h1>
       <div class="flex-row">
-        <div class="flex-col" style="width: 20%">
+        <div class="flex-col" style="width: 15%">
           <hr class="new4">
-          <h2 style="margin-bottom: 2px; margin-top: 5px">About me</h2>
+          <h3 style="margin-bottom: 2px; margin-top: 5px">About</h3>
         </div>
-        <div class="flex-col" style="width: 30%">
+        <div class="flex-col" style="width: 25%">
           <hr class="new4">
-          <p>Info</p>
-          <p>Contact</p>
+          <div class="tab">
+            <p class="aboutme_tablinks active" onClick="openTopic(event, 'Contact', 'aboutme')">Contact</p>
+            <p class="aboutme_tablinks" onClick="openTopic(event, 'Info', 'aboutme')">Info</p>
+          </div>
         </div>
-        <div class="flex-col" style="width: 30%; height: 200px">
+        <div class="flex-col" style="width: 40%; height: 200px">
           <hr class="new4">
-          <p>email: tobyjohnson2000@gmail.com so I'm able to do some things with this I'm not sure what it is</p>
-          <p>hi</p>
+          <ul style="list-style:none; margin: 3px; padding: 0" id="Contact" class="aboutme_tabcontent contactList">
+            <div class="flex-col">
+              <li>
+                <p style="float: left" class="fade-in">
+                  Email
+                </p>
+                <p style="float: right; color: #9b9b9b" class="fade-in">
+                  <a href="mailto:tobyjohnson2000@gmail.com">tobyjohnson2000@gmail.com</a>
+                </p>
+              </li>
+              <li>
+                <p style="float: left" class="fade-in">
+                  Phone
+                </p>
+                <p style="float: right; color: #9b9b9b" class="fade-in">
+                  +44 (0) 7824994605
+                </p>
+              </li>
+              <li>
+                <p style="float: right" class="fade-in">
+                  <a href="https://www.linkedin.com/in/toby-johnson-26b517175/">LinkedIn</a>
+                </p>
+              </li>
+            </div>
+          </ul>
+          <ul style="list-style:none; margin: 3px; padding: 0" id="Info" class="aboutme_tabcontent">
+            <div class="flex-col">
+              <li>
+                <p style="float: left" class="fade-in">
+                  Currently
+                </p>
+                <p style="float: right; color: #9b9b9b" class="fade-in">
+                  Final year at University
+                </p>
+              </li>
+              <li>
+                <p style="float: left" class="fade-in">
+                  Location
+                </p>
+                <p style="float: right; color: #9b9b9b" class="fade-in">
+                  West Sussex, England
+                </p>
+              </li>
+            </div>
+          </ul>
         </div>
       </div>
       <div class="flex-row">
-        <div class="flex-col" style="width: 20%">
+        <div class="flex-col" style="width: 15%">
           <hr class="new4">
-          <h2 style="margin-bottom: 2px; margin-top: 5px">Experience</h2>
-          <h2 style="margin-bottom: 2px; margin-top: 5px">Projects</h2>
-          <h2 style="margin-bottom: 2px; margin-top: 5px">Education</h2>
+          <div class="tab">
+            <h3 style="margin-bottom: 2px; margin-top: 5px" class="portfolio_tablinks" onClick="openTopic(event, 'Experience', 'portfolio')">Experience</h3>
+            <h3 style="margin-bottom: 2px; margin-top: 5px" class="portfolio_tablinks" onClick="openTopic(event, 'TechStack', 'portfolio')">Techology Stack</h3>
+            <h3 style="margin-bottom: 2px; margin-top: 5px" class="portfolio_tablinks" onClick="openTopic(event, 'Projects', 'portfolio')">Projects</h3>
+            <h3 style="margin-bottom: 2px; margin-top: 5px" class="portfolio_tablinks" onClick="openTopic(event, 'Education', 'portfolio')">Education</h3>
+          </div>
         </div>
-        <div class="flex-col" style="width: 70%">
+        <div style="width: 75%">
           <hr class="new4">
-          <p>hi</p>
-          <p>hi</p>
+          <div class="portfolio_tabcontent typewriter" id="Experience">
+                <h2 style="margin-bottom: 20px; margin-top: 10px;" class="typewriter">Sony Professional Solutions Europe</h2>
+                <p class="type">Software Engineer Intern</p>
+                <p class="type">Basingstoke, England</p>
+                <p class="muted">July 2021 - July 2022</p>
+                <div class="flex-row" style="margin-top: 20px; flex-wrap: wrap">
+                  <div class="flex-col">
+                    <div style="width: 500px" class="typewriter">
+                      <h3 style="margin-bottom: 50px">With the goal of helping Sony personnel make better, data driven decisions with their TV  software packages. We developed an internal Python automated testing tool coupled with a web application to view and analyse the results. </h3>
+                      <div class="arrowBullets">
+                        <h4 style="margin-bottom: 5px">
+                          Project Goals
+                        </h4>
+                        <ul>
+                          <li>Automated traversal of Sony's TV software utilising object detection and neural networks </li>
+                          <li>Collect adequate test results during traversal</li>
+                          <li>Web application for analytics and report generation from result data</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="img/techdiagram.png" style="width: 100%; height: auto; max-width: 1100px; margin-bottom: 30px">
+                  </div>
+                    <div style="width: 800px">
+                      <h4>Web Application</h4>
+                      <p style="margin-bottom: 20px; color: #9b9b9b"></p>
+                      <p style="margin-bottom: 20px; color: #9b9b9b">We needed a platform that would utilise the raw data from our Python application and extract as many useful insights as possible to a non-technical personnel.</p>
+                      <p style="margin-bottom: 20px; color: #9b9b9b">I was responsible for picking the stack and developing the application from the ground up, By the end of the placement, we were using it to generate reports that combined data from multiple tests which each ran on their own hardware; providing insights that weren't possible before</p>
+                    </div>
+                  <div style="width: 800px">
+                    <h4>Python tool</h4>
+                    <p style="margin-bottom: 20px; color: #9b9b9b">This tool needed to perform a series of checks while navigating to defined areas of Sony's TV software.</p>
+                    <p style="margin-bottom: 20px; color: #9b9b9b">We used the producer-consumer model which suited our multiprocessing design of the software. This gave us enough performance to process each frame in a queue without progressively falling behind the real time frames of the TV software.</p>
+                    <p style="margin-bottom: 20px; color: #9b9b9b">We are also able to successfully build an object detection algorithm that'll navigate to areas of the software from any start point.</p>
+                  </div>
+                </div>
+                <hr class="new4">
+                <h2 style="margin-bottom: 20px; margin-top: 10px;">Office Depot UK</h2>
+                <p>Work experience</p>
+                <p>Milton Keynes, England</p>
+                <p class="muted">July 2018</p>
+                <p style="margin-top: 20px">Was introduced to various departments including DevOps, Front-End Web Development and Cyber-Security at Office Depot's Digital Innovation Centre.</p>
+          </div>
+          <div class="portfolio_tabcontent" id="TechStack">
+            <h2>Technology Stack</h2>
+            <h3>Core languages</h3>
+            <div class="flex-row">
+              <div style="width: 00px">
+                <div>
+                  <img src="img/tech-icons/python.png" class="tech-icon">
+                  <h4 style="margin-top: 15px; margin-bottom: 10px">Python</h4>
+                  <p class="muted">Frequently used within the Sony project</p>
+                </div>
+              </div>
+              <div style="width: 500px">
+                <div>
+                  <img src="img/tech-icons/python.png" class="tech-icon">
+                  <h4 style="margin-top: 15px; margin-bottom: 10px">Python</h4>
+                  <p class="muted">Frequently used within the Sony project</p>
+                </div>
+              </div>
+              <div style="width: 500px">
+                <div>
+                  <img src="img/tech-icons/python.png" class="tech-icon">
+                  <h4 style="margin-top: 15px; margin-bottom: 10px">Python</h4>
+                  <p class="muted">Frequently used within the Sony project</p>
+                </div>
+              </div>
+              <div style="width: 500px">
+                <div>
+                  <img src="img/tech-icons/python.png" class="tech-icon">
+                  <h4 style="margin-top: 15px; margin-bottom: 10px">Python</h4>
+                  <p class="muted">Frequently used within the Sony project</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="portfolio_tabcontent" id="Projects">
+            <h3>Projects</h3>
+          </div>
+          <div class="portfolio_tabcontent" id="Education">
+            <h3>Education</h3>
+          </div>
         </div>
       </div>
-
     </div>
   </div>
   <div class="footer">

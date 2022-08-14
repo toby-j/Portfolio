@@ -10,23 +10,168 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+/*Variables*/
+:root {
+  --delay: 0.1
+}
 
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+}
+
+/*Muted*/
+
+.muted {
+  color: #abb3bf;
+}
+
+/*Header styles*/
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+h3 {
+  font-weight: 400 !important;
+  font-size: 1.5rem;
+  line-height: 35px;
+}
+
+h5 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+ul li {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+.tech-icon {
+  max-height: 80px;
+}
+
+.arrowBullets ul li:before{
+  content: '';
+  position: absolute;
+  border-right:2px solid #f6f7f9;
+  border-bottom:2px solid #f6f7f9;
+  width:10px;
+  height:10px;
+  top: calc(50% - 4px);
+  left: -40px;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/*Animation*/
+
+.typewriter h2, h4{
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  white-space: nowrap; /* Keeps the content on a single line */
+  animation:
+    typing 1.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+.fade-in {
+  opacity: 1;
+  animation-name: fadeInOpacity;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* Removing styling for hyperlinks*/
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}
+
+.contactList a:hover {
+  color: #f6f7f9;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab p, .tab h3 {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#Contact {
+  display: block;
+}
+
+#TechStack {
+  display: block;
+}
+
+/* Change background color of buttons on hover */
+.tab p:hover, .tab h3:hover {
+  color: #767676;
+}
+
+/* Create an active/current tablink class */
+.tab p.active, h3.active {
+  color: #767676;
+}
+
+/* Style the tab content */
+.portfolio_tabcontent {
+  display: none;
+  border-top: none;
+}
+
+.aboutme_tabcontent {
+  display: none;
+  border-top: none;
+}
 
 html {
   color: #f6f7f9;
   font-size: 1.2em;
   line-height: 1.4;
-  font-family: Gotham, sans-serif;
-}
-
-p {
-  margin: 3px;
-}
-
-h2 {
-  font-family: "Gotham Thin", sans-serif;
-  letter-spacing: 1px;
-  font-size: 1.2em;
+  font-family: "Gotham", sans-serif;
 }
 
 hr.new4 {
