@@ -19,7 +19,7 @@
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
-  max-width: 1000px;
+  width: auto;
   margin: 0 auto;
 }
 
@@ -80,39 +80,6 @@
   padding: 20px 30px;
   position: relative;
   border-radius: 6px;
-}
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-    left: 31px;
-  }
-
-  /* Full-width containers */
-  .timeline-container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
-  }
-
-  /* Make sure that all arrows are pointing leftwards */
-  .timeline-container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
-  }
-
-  /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-    left: 15px;
-  }
-
-  /* Make all right containers behave like the left ones */
-  .right {
-    left: 0%;
-  }
 }
 
 
@@ -186,64 +153,24 @@ p {
   max-height: 150px;
 }
 
-/*Button Two*/
-.button-two {
-  border-radius: 4px;
-  background-color:#f6f7f9;
-  text-align: center;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  width: 200px;
-  transition: all 0.5s;
-}
-
-.button-two span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.button-two span:after {
-  content: '»';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.button-two:hover span {
-  padding-right: 25px;
-}
-
-.button-two:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.arrowBullets ul li:before{
-  content: '';
-  position: absolute;
-  border-right:2px solid #f6f7f9;
-  border-bottom:2px solid #f6f7f9;
-  width:10px;
-  height:10px;
-  top: calc(50% - 4px);
-  left: -40px;
-  transform: translateY(-50%) rotate(-45deg);
-}
-
 /*Animation*/
 
-.typewriter{
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  white-space: nowrap; /* Keeps the content on a single line */
-  animation:
-    typing 1.5s steps(40, end),
-    blink-caret .75s step-end infinite;
+/*.desktop-typewriter{*/
+/*  overflow: hidden; !* Ensures the content is not revealed until the animation *!*/
+/*  white-space: nowrap; !* Keeps the content on a single line *!*/
+/*  animation:*/
+/*    typing 1.5s steps(40, end),*/
+/*    blink-caret .75s step-end infinite;*/
+/*}*/
+
+/*Content containers*/
+.content-container {
+  width: 80%;
 }
+.desktop-menu {
+  width: 10%;
+}
+
 
 .fade-in {
   opacity: 1;
@@ -291,8 +218,12 @@ a {
   display: block;
 }
 
-#Education {
+#Experience {
   display: block;
+}
+
+#MobileAbout {
+  display: none;
 }
 
 /* Change background color of buttons on hover */
@@ -369,6 +300,11 @@ hr.new4 {
 body {
   background-color: #22272e;
 }
+
+/*Mobile*/
+
+
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -528,9 +464,50 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (max-width: 80em) {
+  .html {
+    font-size: 0.9em;
+  }
+
+  .main-container {
+    padding: 10px;
+  }
+
 }
+
+
+@media only screen and (max-width: 70em) {
+  .desktop-menu {
+    display: none;
+  }
+  .content-container {
+    width: 100%;
+  }
+
+  /*Scaling down the headers*/
+  .main-container {
+    padding: 15px;
+  }
+  .timeline-container {
+    padding-left: 20px;
+  }
+
+  html {
+    padding: 5px;
+    font-size: 0.9em;
+  }
+
+  #AboutSection {
+    display: none;
+  }
+
+  #MobileAbout {
+    display: block;
+  }
+
+
+}
+
 
 @media print,
   (-webkit-min-device-pixel-ratio: 1.25),
@@ -612,5 +589,223 @@ textarea {
   h3 {
     page-break-after: avoid;
   }
+}
+
+.btn {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  color: #212529;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 0.375rem 0.75rem;
+  text-align: center;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  user-select: none;
+  cursor:pointer;
+  vertical-align: middle;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #545b62;
+  color: #fff;
+}
+
+.btn-secondary:focus,
+.btn-secondary.focus {
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+.btn-secondary.disabled,
+.btn-secondary:disabled {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary:not(:disabled):not(.disabled).active,
+.show>.btn-secondary.dropdown-toggle {
+  background-color: #545b62;
+  border-color: #4e555b;
+  color: #fff;
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary:not(:disabled):not(.disabled).active:focus,
+.show>.btn-secondary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(130, 138, 145, 0.5);
+}
+
+.btn-light {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #212529;
+}
+
+.btn-light:hover {
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+  color: #212529;
+}
+
+.btn-light:focus,
+.btn-light.focus {
+  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
+
+.btn-light.disabled,
+.btn-light:disabled {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #212529;
+}
+
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-light:not(:disabled):not(.disabled).active,
+.show>.btn-light.dropdown-toggle {
+  background-color: #dae0e5;
+  border-color: #d3d9df;
+  color: #212529;
+}
+
+.btn-light:not(:disabled):not(.disabled):active:focus,
+.btn-light:not(:disabled):not(.disabled).active:focus,
+.show>.btn-light.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(216, 217, 219, 0.5);
+}
+
+.btn-dark {
+  background-color: #343a40;
+  border-color: #343a40;
+  color: #fff;
+}
+
+.btn-dark:hover {
+  background-color: #23272b;
+  border-color: #1d2124;
+  color: #fff;
+}
+
+.btn-dark:focus,
+.btn-dark.focus {
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-dark.disabled,
+.btn-dark:disabled {
+  background-color: #343a40;
+  border-color: #343a40;
+  color: #fff;
+}
+
+.btn-dark:not(:disabled):not(.disabled):active,
+.btn-dark:not(:disabled):not(.disabled).active,
+.show>.btn-dark.dropdown-toggle {
+  background-color: #1d2124;
+  border-color: #171a1d;
+  color: #fff;
+}
+
+.btn-dark:not(:disabled):not(.disabled):active:focus,
+.btn-dark:not(:disabled):not(.disabled).active:focus,
+.show>.btn-dark.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(82, 88, 93, 0.5);
+}
+
+.btn-outline-light {
+  border-color: #f8f9fa;
+  color: #f8f9fa;
+}
+
+.btn-outline-light:hover {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #212529;
+}
+
+.btn-outline-light:focus,
+.btn-outline-light.focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.btn-outline-light.disabled,
+.btn-outline-light:disabled {
+  background-color: transparent;
+  color: #f8f9fa;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):active,
+.btn-outline-light:not(:disabled):not(.disabled).active,
+.show>.btn-outline-light.dropdown-toggle {
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+  color: #212529;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled):active:focus,
+.btn-outline-light:not(:disabled):not(.disabled).active:focus,
+.show>.btn-outline-light.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.2rem rgba(248, 249, 250, 0.5);
+}
+
+.btn-lg,
+.btn-group-lg>.btn {
+  border-radius: 0.3rem;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+}
+
+.btn-sm,
+.btn-group-sm>.btn {
+  border-radius: 0.2rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0.25rem 0.5rem;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.btn-block+.btn-block {
+  margin-top: 1.5rem;
+}
+
+/* default
+---------------------------- */
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-default:focus {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #8c8c8c;
+}
+.btn-default:hover {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}
+.btn-default:active {
+  color: #333;
+  background-color: #e6e6e6;
+  border-color: #adadad;
 }
 
