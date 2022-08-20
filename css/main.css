@@ -12,7 +12,7 @@
    ========================================================================== */
 /*Variables*/
 :root {
-  --delay: 0.1
+  --delay: 0.1;
 }
 
 /*Timeline*/
@@ -155,7 +155,7 @@ p {
 
 /*Animation*/
 
-/*.desktop-typewriter{*/
+/*.type{*/
 /*  overflow: hidden; !* Ensures the content is not revealed until the animation *!*/
 /*  white-space: nowrap; !* Keeps the content on a single line *!*/
 /*  animation:*/
@@ -171,6 +171,27 @@ p {
   width: 10%;
 }
 
+.typewriter {
+  color:#0000;
+  background:
+    linear-gradient(-90deg,#f6f7f9 0px,#0000 0) 10px 0,
+    linear-gradient(#f6f7f9 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation:
+    b .7s infinite steps(1),
+    t calc(var(--n)*.02s) steps(var(--n)) forwards;
+}
+
+@keyframes t{
+  from {background-size:0 200%}
+}
+
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
+}
 
 .fade-in {
   opacity: 1;
@@ -203,6 +224,15 @@ a {
 
 .contactList a:hover {
   color: #f6f7f9;
+}
+
+#socials a:hover {
+  color: #767676;
+}
+
+#socials a {
+  color: #f6f7f9;
+  transition: 0.3s;
 }
 
 /* Style the buttons that are used to open the tab content */
