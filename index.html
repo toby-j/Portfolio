@@ -24,7 +24,7 @@
   <!-- Add your site or application content here -->
   <div class="main-container">
     <div class="flex-col" style="margin-top: 2%">
-      <h1 style="margin-bottom: 30px" class="mobile-typewriterwriter">Toby Johnson</h1>
+      <h1 style="margin-bottom: 30px; --n:12" class="typewriter">Toby Johnson</h1>
       <div class="flex-row" id="AboutSection">
         <div class="flex-col" style="width: 15%">
           <hr class="new4">
@@ -131,14 +131,14 @@
           <div class="portfolio_tabcontent" id="Experience">
                 <h2 style="margin-bottom: 20px; margin-top: 10px; --n:25" class="typewriter">Sony Professional Solutions Europe</h2>
                 <p class="typewriter" style="--n:20">Software Engineer Intern</p>
-                <p class="typewriter">Basingstoke, England</p>
+                <p class="typewriter" style="--n:20">Basingstoke, England</p>
                 <p class="muted">July 2021 - July 2022</p>
                 <div class="flex-row" style="flex-wrap: wrap; ">
                   <div class="flex-col">
                     <div style="max-width: 700px">
                       <h3 style="margin-bottom: 30px">With the goal of helping Sony personnel make better, data driven decisions with their TV  software packages. We developed an internal Python automated testing tool coupled with a web application to view and analyse the results from this tool.</h3>
                       <div class="arrowBullets">
-                        <h4 class="typewriter" style="margin-bottom: 5px">
+                        <h4 class="typewriter" style="margin-bottom: 5px; --n:13">
                           Project Goals
                         </h4>
                         <ul>
@@ -148,13 +148,13 @@
                         </ul>
                       </div>
                       <div style="max-width: 1200px">
-                        <h4 class="typewriter">Web Application</h4>
+                        <h4 class="typewriter" style="--n:14">Web Application</h4>
                         <p style="margin-bottom: 20px; color: #9b9b9b"></p>
                         <p style="margin-bottom: 20px; color: #9b9b9b">We needed a platform that would utilise the raw data from our Python application and extract as many useful insights as possible to a non-technical personnel.</p>
                         <p style="margin-bottom: 20px; color: #9b9b9b">I was responsible for picking the stack and developing the application from the ground up, By the end of the placement, we were using it to generate reports that combined data from multiple tests which each ran on their own hardware; providing insights that weren't possible before.</p>
                       </div>
                       <div style="max-width: 1200px">
-                        <h4 class="typewriter">Python tool</h4>
+                        <h4 class="typewriter" style="--n:11">Python tool</h4>
                         <p style="margin-bottom: 20px; color: #9b9b9b">This tool needed to perform a series of checks while navigating to defined areas of Sony's TV software.</p>
                         <p style="margin-bottom: 20px; color: #9b9b9b">We used the producer-consumer model which suited our multiprocessing design of the software. This gave us enough performance to process each frame in a queue without progressively falling behind the real time frames of the TV software.</p>
                         <p style="margin-bottom: 20px; color: #9b9b9b">We are also able to successfully build an object detection algorithm that'll navigate to areas of the software from any start point.</p>
@@ -171,9 +171,9 @@
                 <p style="margin-top: 20px">Was introduced to various departments including DevOps, Front-End Web Development and Cyber-Security at Office Depot's Digital Innovation Centre.</p>
           </div>
           <div class="portfolio_tabcontent" id="TechStack">
-            <h2>Technology Stack</h2>
+            <h2 class="typewriter" style="--n:14; margin-top: 10px">Technology Stack</h2>
             <div class="flex-col">
-              <h3>Core languages</h3>
+              <h3 class="typewriter" style="--n:14">Core languages</h3>
               <div class="tech-icons-flex-row">
                 <div class="tech-icon-con">
                   <div>
@@ -213,6 +213,13 @@
                 </div>
                 <div class="tech-icon-con">
                   <div>
+                    <img src="img/tech-icons/swift.png" class="tech-icon">
+                    <h4 style="margin-top: 15px; margin-bottom: 10px">Swift</h4>
+                    <p class="muted">Followed an Model View ViewModel (MVVM) architecture when I developed the barcode scanner for my mobile application BeautyTruth.</p>
+                  </div>
+                </div>
+                <div class="tech-icon-con">
+                  <div>
                     <img src="img/tech-icons/html5.png" class="tech-icon">
                     <h4 style="margin-top: 15px; margin-bottom: 10px">HTML</h4>
                     <p class="muted">Confident in HTML from writing my own websites and using .tsx with Sony's web application.</p>
@@ -226,7 +233,7 @@
                   </div>
                 </div>
               </div>
-              <h3>Frameworks, libraries and supersets</h3>
+              <h3 class="typewriter" style="--n:35">Frameworks, libraries and supersets</h3>
               <div class="tech-icons-flex-row">
                 <div class="tech-icon-con">
                   <div>
@@ -265,13 +272,23 @@
                 </div>
                 <div class="tech-icon-con">
                   <div>
-                    <img src="img/tech-icons/typewriterscript.png" class="tech-icon">
+                    <img src="img/tech-icons/typescript.png" class="tech-icon">
                     <h4 style="margin-top: 15px; margin-bottom: 10px">TypeScript</h4>
                     <p class="muted">With the Sony web application, I frequently used TypeScript when serialising returned data from requests that front-end would make to the two databases.</p>
                   </div>
                 </div>
               </div>
-              <h3>Databases</h3>
+              <h3 class="typewriter" style="--n:15">Version Control</h3>
+              <div class="tech-icons-flex-row">
+                <div class="tech-icon-con">
+                  <div>
+                    <img src="img/tech-icons/git.png" class="tech-icon">
+                    <h4 style="margin-top: 15px; margin-bottom: 10px">Git</h4>
+                    <p class="muted">Have always used Git for my projects, University and at my time at Sony.</p>
+                  </div>
+                </div>
+              </div>
+              <h3 class="typewriter" style="--n:9">Databases</h3>
               <div class="tech-icons-flex-row">
                 <div class="tech-icon-con">
                   <div>
@@ -288,29 +305,47 @@
                   </div>
                 </div>
               </div>
-              <h3>Platforms</h3>
-              <div class="tech-icons-flex-row">
-                <div class="tech-icon-con">
-                  <div>
-                    <img src="img/tech-icons/windows.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Windows</h4>
-                    <p class="muted">Experience with Active Directory at Sony as well working with some of Sony's C# internal apps.</p>
-                  </div>
-                </div>
-                <div class="tech-icon-con">
-                  <div>
-                    <img src="img/tech-icons/linux.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Linux</h4>
-                    <p class="muted">At Sony I designed the development environment to run our Python application. This involved building some legacy software to control the project's hardware. I also set up the networking of each Linux machine to meet Sony's network requirements.</p>
-                  </div>
-                </div>
-              </div>
               <h3>Containerisation</h3>
               <div class="tech-icon-con">
                 <div>
                   <img src="img/tech-icons/docker.png" class="tech-icon">
                   <h4 style="margin-top: 15px; margin-bottom: 10px">Docker</h4>
                   <p class="muted">Containerized our Python application and deployed it one of Sony's Windows machines other internal apps installed.</p>
+                </div>
+              </div>
+              <h3>Cloud Services</h3>
+              <div class="tech-icon-con" style="width: auto">
+                <div>
+                  <img src="img/tech-icons/aws.png" class="tech-icon" style="max-height: 60px">
+                  <h4 style="margin-top: 15px; margin-bottom: 10px">Amazon Web Services</h4>
+                  <p class="muted">For the Software Engineering module in Year 2, we needed to build a web application in groups. For our project, we used:</p>
+                  <p style="margin-top: 10px; margin-bottom: 10px">Elastic Beanstalk</p>
+                  <p style="margin-top: 10px; margin-bottom: 10px" class="muted">We used BitBucket Pipelines to containerise our web application and deploy it to our Elastic Beanstalk environment.</p>
+                  <p>Lambda</p>
+                  <p style="margin-top: 10px; margin-bottom: 10px" class="muted">To make periodic corrections to our MongoDB database.</p>
+                  <p>EC2</p>
+                  <p style="margin-top: 10px; margin-bottom: 10px" class="muted">Our application was hosted on an EC2 instance which we integrated with our NGINX reverse proxy.</p>
+                  <p>Cognito</p>
+                  <p style="margin-top: 10px; margin-bottom: 10px" class="muted">To handle our user authentication</p>
+                  <p style="margin-top: 20px">When I was developing my mobile application BeautyTruth, I used the Amplify Framework.</p>
+
+                </div>
+              </div>
+              <h3>Platforms</h3>
+              <div class="tech-icons-flex-row">
+                <div class="tech-icon-con">
+                  <div>
+                    <img src="img/tech-icons/windows.png" class="tech-icon">
+                    <h4 style="margin-top: 15px; margin-bottom: 10px">Windows</h4>
+                    <p class="muted">Worked on Windows Server 2019 when I was developing with some of Sony's C# internal apps.</p>
+                  </div>
+                </div>
+                <div class="tech-icon-con">
+                  <div>
+                    <img src="img/tech-icons/linux.png" class="tech-icon">
+                    <h4 style="margin-top: 15px; margin-bottom: 10px">Linux</h4>
+                    <p class="muted">At Sony, I designed the development environment to run our Python application. This involved building some legacy software to control the project's hardware. I also set up the networking of each Linux machine to meet Sony's network requirements.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -330,6 +365,22 @@
             <p>I designed and branded two products and shared profits with a plastic pollution charity.</p>
             <p style="margin-bottom: 30px">I've sold them in local garden centers and are available online.</p>
             <button class="btn btn-outline-light" onclick="location.href='https://bepanda.co.uk/'">View Website</button>
+            <div class="flex-col" style="margin-bottom: 20px; margin-top: 30px;">
+              <div>
+                <div style="text-align: center; float: left">
+                  <div class="flex-col" style="align-items: center">
+                    <img style="margin-top: 10px" src="img/project-icons/btlogo.png" class="project-icon">
+                    <img style="margin-top: 10px; width: 200px" src="img/project-icons/bttext.png" class="project-icon">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h4 class="muted">“To accelerate the transition to natural and ethical cosmetic products”</h4>
+            <p class="muted">A mobile application to analyse ingredients on beauty products.</p>
+            <p class="muted">April 2021 - July 2021</p>
+            <p style="margin-top: 25px">Started by me and some friends at university, we wanted to increase the convenience and confidence for consumers in identifying natural and ethical cosmetic products.</p>
+            <p>I developed a barcode scanner Swift that would fetch from a product database and display product information.</p>
+            <p>However, I decided to pause development to focus on my placement at Sony.</p>
           </div>
           <div class="portfolio_tabcontent" id="Education">
             <div style="float: left; margin-top: 50px;">
@@ -337,14 +388,35 @@
                 <div class="timeline-container right">
                   <div class="timeline-content">
                     <img src="img/education-icons/surrey.png" class="education-icon">
-                    <h2 style="margin-top: 10px; margin-bottom: 20px" class="typewriter">University of Surrey</h2>
+                    <h2 style="margin-top: 10px; margin-bottom: 20px; --n:20" class="typewriter">University of Surrey</h2>
                     <p>Bachelor's degree, Computer Science and Information Technology BSc</p>
                     <p>With Professional Training Year</p>
                     <p class="muted">2019 - 2023</p>
-                    <h3 class="typewriter" style="margin-top: 80px; margin-bottom: 10px">Year 4</h3>
+                    <h3 class="typewriter" style="margin-top: 80px; margin-bottom: 10px; --n:6">Year 4</h3>
                     <p style="margin-bottom: 20px" class="muted">2022 - 2023</p>
-                    <p class="muted">On Going</p>
-                    <h3 class="typewriter" style="margin-top: 80px; margin-bottom: 10px">Professional Training Year</h3>
+                    <div class="flex-col">
+                      <div class="flex-row">
+                        <p class="muted">Deep Learning and Advanced AI</p>
+                        <p>Pending</p>
+                      </div>
+                      <div class="flex-row">
+                        <p class="muted">Distributed Systems</p>
+                        <p>Pending</p>
+                      </div>
+                      <div class="flex-row">
+                        <p class="muted">Internet of Things</p>
+                        <p>Pending</p>
+                      </div>
+                      <div class="flex-row">
+                        <p class="muted">Natural Language Processing</p>
+                        <p>Pending</p>
+                      </div>
+                      <div class="flex-row">
+                        <p class="muted">Dissertation Project</p>
+                        <p>Pending</p>
+                      </div>
+                    </div>
+                    <h3 class="typewriter" style="margin-top: 80px; margin-bottom: 10px; --n:26">Professional Training Year</h3>
                     <p style="margin-bottom: 20px" class="muted">2021 - 2022</p>
                     <h4 style="margin-bottom: 5px">Sony Professional Solutions Europe</h4>
                     <p class="muted">Software Engineer Intern</p>
@@ -387,11 +459,11 @@
                       </div>
                     </div>
                     <div class="flex-row">
-                      <h4>Total</h4>
+                      <h4 class="typewriter" style="--n:5">Total</h4>
                       <h4>73.75%</h4>
                     </div>
                     <p class="muted" style="float: right">No resits</p>
-                    <h3 style="margin-top: 80px; margin-bottom: 10px" class="typewriter">Year 1</h3>
+                    <h3 style="margin-top: 80px; margin-bottom: 10px; --n:6" class="typewriter">Year 1</h3>
                     <p style="margin-bottom: 20px" class="muted">2019 - 2020</p>
                     <div class="flex-col">
                       <div class="flex-row">
@@ -439,7 +511,7 @@
                 <div class="timeline-container right">
                   <div class="timeline-content">
                     <img src="img/education-icons/bhasvic.png" class="education-icon">
-                    <h2 style="margin-top: 10px; margin-bottom: 20px" class="typewriter">Brighton, Hove & Sussex Sixth Form College</h2>
+                    <h2 style="margin-top: 10px; margin-bottom: 20px; --n:42" class="typewriter">Brighton, Hove & Sussex Sixth Form College</h2>
                     <p style="margin-bottom: 10px">Sixth form college</p>
                     <p class="muted">2016 - 2018</p>
                     <div class="flex-col" style="margin-top: 20px">
@@ -465,7 +537,7 @@
                 <div class="timeline-container right">
                   <div class="timeline-content">
                     <img src="img/education-icons/downlands.png" class="education-icon">
-                    <h2 style="margin-top: 10px; margin-bottom: 20px" class="typewriter">Downlands Community School</h2>
+                    <h2 style="margin-top: 10px; margin-bottom: 20px; --n:26" class="typewriter">Downlands Community School</h2>
                     <p style="margin-bottom: 10px">Secondary School</p>
                     <p class="muted">2011 - 2016</p>
                     <div class="flex-col" style="margin-top: 20px">
