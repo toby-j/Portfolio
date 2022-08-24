@@ -233,6 +233,16 @@ a {
   transition: 0.3s;
 }
 
+.light-link {
+  color: #767676;
+  transition: 0.3s;
+}
+
+.light-link:hover {
+  color: #f6f7f9;
+  transition: 0.3s;
+}
+
 /* Style the buttons that are used to open the tab content */
 .tab p, .tab h3 {
   background-color: inherit;
@@ -520,7 +530,7 @@ textarea {
     padding: 15px;
   }
   .timeline-container {
-    padding-left: 20px;
+    padding: 0;
   }
 
   html {
@@ -631,7 +641,7 @@ textarea {
   border-radius: 0.25rem;
   color: #212529;
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.5;
   padding: 0.375rem 0.75rem;
