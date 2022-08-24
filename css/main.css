@@ -233,6 +233,10 @@ a {
   transition: 0.3s;
 }
 
+#sonyHostedDiagram {
+  display: none;
+}
+
 .light-link {
   color: #767676;
   transition: 0.3s;
@@ -546,7 +550,13 @@ textarea {
     display: block;
   }
 
+  #sonyDiagram {
+    display: none;
+  }
 
+  #sonyHostedDiagram {
+    display: block;
+  }
 }
 
 
