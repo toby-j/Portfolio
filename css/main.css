@@ -1,12 +1,3 @@
-/*! HTML5 Boilerplate v8.0.0 | MIT License | https://html5boilerplate.com/ */
-
-/* main.css 2.1.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -15,6 +6,118 @@
   --delay: 0.1;
 }
 
+body {
+  background-color: #22272e;
+}
+
+html {
+  color: #f6f7f9;
+  font-size: 1.2em;
+  line-height: 1.4;
+  font-family: "Gotham", sans-serif;
+}
+
+/*Header*/
+h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  --n:20
+}
+
+h3 {
+  --n:20
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h4 {
+  font-family: "Gotham", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  margin-top: 15px;
+  margin-bottom: 10px
+}
+
+h3 {
+  font-weight: 400 !important;
+  font-size: 1.5rem;
+  line-height: 35px;
+}
+
+
+/*List*/
+
+ul li {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+/*Paragraphs*/
+
+p {
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+
+/* ==========================================================================
+   Custom styles
+   ========================================================================== */
+
+/*Common Styles*/
+.float-left {
+  float: left
+}
+
+.float-right {
+  float: right
+}
+
+.flex-wrap-wrap {
+  flex-wrap: wrap
+}
+
+.ten-top-bottom-margins {
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.twenty-top-margin {
+  margin-top: 20px;
+}
+
+.twenty-bottom-margin {
+  margin-bottom: 20px;
+}
+
+.ten-bottom-margin {
+  margin-bottom: 10px;
+}
+
+.ten-top-margin {
+  margin-top: 10px;
+}
+
+.thirty-top-margin {
+  margin-top: 30px
+}
+
+.thirty-bottom-margin {
+  margin-bottom: 30px
+}
+
+.thirty-top-bottom-margin {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+/*CSS drawings*/
 /*Timeline*/
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -23,7 +126,6 @@
   margin: 0 auto;
 }
 
-/* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
   position: absolute;
@@ -31,12 +133,12 @@
   background-color: white;
   top: 0;
   bottom: 0;
-  /*left: 50%;*/
   margin-left: -3px;
 }
 
-.vertLine {
-  border-right: 1px solid red;
+.timeline-section {
+  float: left;
+  margin-top: 50px
 }
 
 /* Container around content */
@@ -60,14 +162,72 @@
   z-index: 1;
 }
 
+/* The actual timeline content */
+.timeline-content {
+  padding: 20px 30px;
+  position: relative;
+  border-radius: 6px;
+}
+
+.vertLine {
+  border-right: 1px solid red;
+}
+
+/*Navigation styles*/
+
+/*Navigation tabs initial states*/
+#Contact {
+  display: block;
+}
+
+#Experience {
+  display: block;
+}
+
+#MobileAbout {
+  display: none;
+}
+
+.desktop-navigation-text {
+  margin-bottom: 2px;
+  margin-top: 5px
+}
+
+.mobile-nav-buttons-flex {
+  flex-wrap: wrap;
+}
+
+
+.navigation-container {
+  margin-top: 20px;
+  margin-bottom: 10px
+}
+
+/*Arrow bullet points*/
+.arrowBullets ul li {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.arrowBullets ul {
+  list-style: none;
+}
+
+.arrowBullets ul li:before{
+  content: '';
+  position: absolute;
+  border-right:3px solid white;
+  border-bottom:3px solid white;
+  width:10px;
+  height:10px;
+  top: calc(50% - 4px);
+  left: -35px;
+  transform: translateY(-50%) rotate(-45deg);
+}
+
 /* Place the container to the left */
 .left {
   left: 0;
-}
-
-/* Place the container to the right */
-.right {
-  /*left: 50%;*/
 }
 
 /* Fix the circle for containers on the right side */
@@ -75,98 +235,30 @@
   left: -16px;
 }
 
-/* The actual content */
-.timeline-content {
-  padding: 20px 30px;
-  position: relative;
-  border-radius: 6px;
-}
-
-
 /* Style the tab */
 .tab {
   overflow: hidden;
 }
 
 /*Muted*/
-
 .muted {
   color: #abb3bf;
-}
-
-/*Header styles*/
-
-h2 {
-  font-size: 2.5rem;
-  font-weight: 400;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-h4 {
-  font-family: "Gotham", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-h3 {
-  font-weight: 400 !important;
-  font-size: 1.5rem;
-  line-height: 35px;
-}
-
-ul li {
-  position: relative;
-  padding-bottom: 10px;
-}
-
-ul {
-  list-style: none;
-}
-
-p {
-  margin-bottom: 3px;
-  margin-top: 3px;
-}
-
-.tech-icon {
-  max-height: 80px;
-  margin-bottom: 10px;
 }
 
 .education-icon {
   max-height: 120px;
 }
 
-.tech-icon-con {
-  width: 400px;
-  margin-right: 15px;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
 .project-icon {
   max-height: 150px;
 }
-
-/*Animation*/
-
-/*.type{*/
-/*  overflow: hidden; !* Ensures the content is not revealed until the animation *!*/
-/*  white-space: nowrap; !* Keeps the content on a single line *!*/
-/*  animation:*/
-/*    typing 1.5s steps(40, end),*/
-/*    blink-caret .75s step-end infinite;*/
-/*}*/
 
 /*Content containers*/
 .content-container {
   width: 80%;
 }
 .desktop-menu {
-  width: 10%;
+  width: 15%;
 }
 
 .typewriter {
@@ -233,7 +325,9 @@ a {
   transition: 0.3s;
 }
 
-#sonyHostedDiagram {
+#SONY-hosted-system-architecture {
+  width: 300px;
+  margin: 0 auto;
   display: none;
 }
 
@@ -256,18 +350,6 @@ a {
   transition: 0.3s;
 }
 
-#Contact {
-  display: block;
-}
-
-#Experience {
-  display: block;
-}
-
-#MobileAbout {
-  display: none;
-}
-
 /* Change background color of buttons on hover */
 .tab p:hover, .tab h3:hover {
   color: #767676;
@@ -284,17 +366,6 @@ a {
   border-top: none;
 }
 
-.aboutme_tabcontent {
-  display: none;
-  border-top: none;
-}
-
-html {
-  color: #f6f7f9;
-  font-size: 1.2em;
-  line-height: 1.4;
-  font-family: "Gotham", sans-serif;
-}
 
 hr.new4 {
   margin-left: 5px;
@@ -342,15 +413,99 @@ hr.new4 {
   padding: 100px;
 }
 
-body {
-  background-color: #22272e;
+/*Name Section*/
+
+.name-container {
+  margin-top: 2%
 }
 
+.name-h1 {
+  margin-bottom: 30px;
+  --n:12;
+}
+
+/*About Me Section*/
+
+.about-section-col {
+  width: 15%
+}
+
+/*Contact Section*/
+
+.contact-section-col {
+  width: 40%;
+  height: 200px
+}
+
+
+.aboutme_tabcontent {
+  display: none;
+  border-top: none;
+  list-style:none;
+  margin: 3px;
+  padding: 0
+}
+
+.contact-hover-item {
+  float: right;
+  color: #9b9b9b
+}
+
+.introduction-container {
+  width: 35%
+}
+
+
+/*Technology Section*/
+
+.tech-icon-con {
+  width: 400px;
+  margin-right: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.tech-icon {
+  max-height: 80px;
+  margin-bottom: 10px;
+}
+
+.aws {
+  width: auto
+}
+
+.aws img {
+  max-height: 60px
+}
+
+/*Projects Section*/
+
+.bepanda-text {
+  margin-top: 10px;
+  font-size: 30pt;
+  font-family: Varela Round, sans-serif;
+}
+
+.bepanda-container {
+  text-align: center;
+  float: left
+}
+
+.bt-container {
+  text-align: center;
+  float: left
+}
+
+.bt-col {
+  align-items: center;
+}
+
+.bt-text {
+  width: 215px
+}
+
+
 /*Mobile*/
-
-
-
-
 /*
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
@@ -382,6 +537,56 @@ hr {
   border-top: 1px solid #ccc;
   margin: 1em 0;
   padding: 0;
+}
+
+.contact-container {
+  width: 100%;
+  padding-right: 20px
+}
+
+
+
+/*Experience*/
+
+/*SONY*/
+.SONY-h2-text {
+  margin-bottom: 20px;
+  margin-top: 10px;
+  --n:25
+}
+
+.SONY-p-text {
+  --n:20
+}
+
+.SONY-Section {
+  max-width: 700px
+}
+
+.SONY-Section h3 {
+  margin-bottom: 30px
+}
+
+.SONY-Section h4 {
+  margin-bottom: 5px;
+  --n:13
+}
+
+.SONY-Section p {
+  margin-bottom: 20px;
+  color: #9b9b9b
+}
+
+.SONY-text-container {
+  max-width: 1200px;
+}
+
+.SONY-system-architecture {
+  min-width: 400px;
+  object-fit: contain;
+  width: 1100px;
+  margin-top: 20px;
+  margin-bottom: 20px
 }
 
 /*
@@ -550,11 +755,13 @@ textarea {
     display: block;
   }
 
-  #sonyDiagram {
+  #SONY-system-architecture {
     display: none;
   }
 
-  #sonyHostedDiagram {
+  #SONY-hosted-system-architecture {
+    width: 300px;
+    margin: 0 auto;
     display: block;
   }
 }
@@ -660,6 +867,7 @@ textarea {
   user-select: none;
   cursor:pointer;
   vertical-align: middle;
+  margin: 5px 3px;
 }
 
 .btn-secondary {

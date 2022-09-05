@@ -21,45 +21,45 @@
   <meta property="og:title" content="Portfolio Webpage">
   <meta property="og:image" content="https://ams03pap003files.storage.live.com/y4m42ym2M3NwqdM8KvghENv4BRBpeLeHKUo6CbQz6b6S4ADfo2oZj5QvGe2_WqGS-edYjR3LfnHtogMtHHXQ6KtJ9Q_yZ0_JbKDZXYWJoro851BUnvkEP1AgTCIePeLF4DXzfNco_8gY3T8z_7PWrnx_yRnPn-cQz-EdQNFFTh8u74PA0Rt-QHR395XYQYbclPI?width=1024&height=600&cropmode=none">
   <meta property="og:description" content="Toby Johnson's Portfolio Webpage">
-  <link rel="icon" type="image/x-icon" href="img/favicons/64.ico">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://ams03pap003files.storage.live.com/*; script-src 'self' https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js;">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
   <!-- Add your site or application content here -->
   <div class="main-container">
-    <div class="flex-col" style="margin-top: 2%">
-      <h1 style="margin-bottom: 30px; --n:12" class="typewriter">Toby Johnson</h1>
+    <div class="flex-col name-container">
+      <h1 class="typewriter name-h1">Toby Johnson</h1>
       <div class="flex-row" id="AboutSection">
-
-        <div class="flex-col" style="width: 15%">
+        <div class="flex-col about-section-col">
           <hr class="new4">
           <div class="tab">
-            <p class="aboutme_tablinks active" onClick="openTopic(event, 'Contact', 'aboutme')">Contact</p>
-            <p class="aboutme_tablinks" onClick="openTopic(event, 'Info', 'aboutme')">Info</p>
+            <p class="aboutme_tablinks active" id="contact-navigation-text" onClick="openTopic(event, 'Contact', 'aboutme')">Contact</p>
+            <p class="aboutme_tablinks" id="info-navigation-text" onClick="openTopic(event, 'Info', 'aboutme')">Info</p>
           </div>
         </div>
-        <div class="flex-col" style="width: 40%; height: 200px">
+        <div class="flex-col contact-section-col">
           <hr class="new4">
-          <ul style="list-style:none; margin: 3px; padding: 0" id="Contact" class="aboutme_tabcontent contactList">
+          <ul id="Contact" class="aboutme_tabcontent contactList">
             <div class="flex-col">
               <li>
-                <p style="float: left" class="fade-in">
+                <p class="fade-in float-left">
                   Email
                 </p>
-                <p style="float: right; color: #9b9b9b" class="fade-in">
+                <p class="fade-in contact-hover-item">
                   <a href="mailto:tobyjohnson2000@gmail.com">tobyjohnson2000@gmail.com</a>
                 </p>
               </li>
               <li>
-                <p style="float: left" class="fade-in">
+                <p class="fade-in float-left">
                   Phone
                 </p>
-                <p style="float: right; color: #9b9b9b" class="fade-in">
+                <p class="fade-in contact-hover-item">
                   +44 (0) 7824994605
                 </p>
               </li>
               <li>
-                <p style="float: right" class="fade-in" id="socials">
+                <p class="fade-in float-right" id="socials">
                   <a href="https://www.linkedin.com/in/toby-johnson-26b517175/">LinkedIn</a>
                   <span>|</span>
                   <a href="https://github.com/toby-j">GitHub</a>
@@ -67,36 +67,35 @@
               </li>
             </div>
           </ul>
-
-          <ul style="list-style:none; margin: 3px; padding: 0" id="Info" class="aboutme_tabcontent">
+          <ul id="Info" class="aboutme_tabcontent">
             <div class="flex-col">
               <li>
-                <p style="float: left" class="fade-in">
+                <p class="fade-in float-left">
                   Currently
                 </p>
-                <p style="float: right; color: #9b9b9b" class="fade-in">
+                <p class="fade-in contact-hover-item">
                   Final year at University
                 </p>
               </li>
               <li>
-                <p style="float: left" class="fade-in">
+                <p class="fade-in float-left">
                   Location
                 </p>
-                <p style="float: right; color: #9b9b9b" class="fade-in">
+                <p class="fade-in contact-hover-item">
                   West Sussex, England
                 </p>
               </li>
             </div>
           </ul>
         </div>
-        <div class="flex-col" style="width: 35%">
+        <div class="flex-col introduction-container">
           <hr class="new4">
           <p>A Final Year Computer Science undergraduate with a year working as a Software Engineer Intern for Sony Europe. I'm looking for roles in engineering including DevOps, Full-Stack, QA and Security.</p>
         </div>
       </div>
       <div id="MobileAbout">
         <div class="flex-row">
-          <div class="flex-col" style="width: 100%; padding-right: 20px">
+          <div class="flex-col contact-container">
             <div class="flex-row">
               <p class="muted">Email</p>
               <p>tobyjohnson2000@gmail.com</p>
@@ -116,36 +115,36 @@
           </div>
         </div>
         <h5>A Final Year Computer Science undergraduate with a year working as a Software Engineer Intern for Sony Europe. I'm looking for roles in engineering including DevOps, Full-Stack, QA and Security.</h5>
-        <div class="flex-row" style="margin-top: 20px; margin-bottom: 10px">
-          <button class="portfolio_tablinks btn btn-outline-light active" onClick="openTopic(event, 'Experience', 'portfolio')">Experience</button>
-          <button class="portfolio_tablinks btn btn-outline-light" onClick="openTopic(event, 'TechStack', 'portfolio')">Technology Stack</button>
-          <button class="portfolio_tablinks btn btn-outline-light" onClick="openTopic(event, 'Projects', 'portfolio')">Projects</button>
-          <button class="portfolio_tablinks btn btn-outline-light" onClick="openTopic(event, 'Education', 'portfolio')">Education</button>
+        <div class="flex-row mobile-nav-buttons-flex">
+          <button class="portfolio_tablinks btn btn-outline-light active" id="experience-tab-mobile">Experience</button>
+          <button class="portfolio_tablinks btn btn-outline-light" id="techstack-tab-mobile">Technology Stack</button>
+          <button class="portfolio_tablinks btn btn-outline-light" id="projects-tab-mobile">Projects</button>
+          <button class="portfolio_tablinks btn btn-outline-light" id="education-tab-mobile">Education</button>
         </div>
       </div>
       <div class="flex-row">
-        <div class="flex-col desktop-menu" style="width: 15%">
+        <div class="flex-col desktop-menu">
           <hr class="new4">
           <div class="tab">
-            <h3 style="margin-bottom: 2px; margin-top: 5px" class="portfolio_tablinks active" onClick="openTopic(event, 'Experience', 'portfolio')">Experience</h3>
-            <h3 style="margin-bottom: 2px; margin-top: 5px" class="portfolio_tablinks" onClick="openTopic(event, 'TechStack', 'portfolio')">Technology Stack</h3>
-            <h3 style="margin-bottom: 2px; margin-top: 5px" class="portfolio_tablinks" onClick="openTopic(event, 'Projects', 'portfolio')">Projects</h3>
-            <h3 style="margin-bottom: 2px; margin-top: 5px" class="portfolio_tablinks" onClick="openTopic(event, 'Education', 'portfolio')">Education</h3>
+            <h3 class="portfolio_tablinks desktop-navigation-text active" id="experience-tab-desktop">Experience</h3>
+            <h3 class="portfolio_tablinks desktop-navigation-text" id="techstack-tab-desktop">Technology Stack</h3>
+            <h3 class="portfolio_tablinks desktop-navigation-text" id="projects-tab-desktop">Projects</h3>
+            <h3 class="portfolio_tablinks desktop-navigation-text" id="education-tab-desktop">Education</h3>
           </div>
         </div>
         <div class="content-container">
           <hr class="new4">
           <div class="portfolio_tabcontent" id="Experience">
-                <h2 style="margin-bottom: 20px; margin-top: 10px; --n:25" class="typewriter">Sony Professional Solutions Europe</h2>
-                <p class="typewriter" style="--n:20">Software Engineer Intern</p>
-                <p class="typewriter" style="--n:20">Basingstoke, England</p>
+                <h2 class="typewriter SONY-h2-text">Sony Professional Solutions Europe</h2>
+                <p class="typewriter SONY-p-text">Software Engineer Intern</p>
+                <p class="typewriter SONY-p-text">Basingstoke, England</p>
                 <p class="muted">July 2021 - July 2022</p>
-                <div class="flex-row" style="flex-wrap: wrap; ">
+                <div class="flex-row flex-wrap-wrap">
                   <div class="flex-col">
-                    <div style="max-width: 700px">
-                      <h3 style="margin-bottom: 30px">With the goal of helping Sony personnel make better, data driven decisions with their TV  software packages. We developed an internal Python automated testing tool coupled with a web application to view and analyse the results from this tool.</h3>
+                    <div class="SONY-Section">
+                      <h3>With the goal of helping Sony personnel make better, data driven decisions with their TV  software packages. We developed an internal Python automated testing tool coupled with a web application to view and analyse the results from this tool.</h3>
                       <div class="arrowBullets">
-                        <h4 class="typewriter" style="margin-bottom: 5px; --n:13">
+                        <h4 class="typewriter">
                           Project Goals
                         </h4>
                         <ul>
@@ -154,162 +153,161 @@
                           <li>Web application for analytics and report generation from result data</li>
                         </ul>
                       </div>
-                      <div style="max-width: 1200px">
-                        <h4 class="typewriter" style="--n:14">Web Application</h4>
-                        <p style="margin-bottom: 20px; color: #9b9b9b"></p>
-                        <p style="margin-bottom: 20px; color: #9b9b9b">We needed a platform that would utilise the raw data from our Python application and extract as many useful insights as possible to a non-technical personnel.</p>
-                        <p style="margin-bottom: 20px; color: #9b9b9b">I was responsible for picking the stack and developing the application from the ground up, By the end of the placement, we were using it to generate reports that combined data from multiple tests which each ran on their own hardware; providing insights that weren't possible before.</p>
+                      <div class="SONY-text-container">
+                        <h4 class="typewriter">Web Application</h4>
+                        <p>We needed a platform that would utilise the raw data from our Python application and extract as many useful insights as possible to a non-technical personnel.</p>
+                        <p>I was responsible for picking the stack and developing the application from the ground up, By the end of the placement, we were using it to generate reports that combined data from multiple tests which each ran on their own hardware; providing insights that weren't possible before.</p>
                       </div>
-                      <div style="max-width: 1200px">
-                        <h4 class="typewriter" style="--n:11">Python tool</h4>
-                        <p style="margin-bottom: 20px; color: #9b9b9b">This tool needed to perform a series of checks while navigating to defined areas of Sony's TV software.</p>
-                        <p style="margin-bottom: 20px; color: #9b9b9b">We used the producer-consumer model which suited our multiprocessing design of the software. This gave us enough performance to process each frame in a queue without progressively falling behind the real time frames of the TV software.</p>
-                        <p style="margin-bottom: 20px; color: #9b9b9b">We are also able to successfully build an object detection algorithm that'll navigate to areas of the software from any start point.</p>
+                      <div class="SONY-text-container">
+                        <h4 class="typewriter">Python tool</h4>
+                        <p>This tool needed to perform a series of checks while navigating to defined areas of Sony's TV software.</p>
+                        <p>We used the producer-consumer model which suited our multiprocessing design of the software. This gave us enough performance to process each frame in a queue without progressively falling behind the real time frames of the TV software.</p>
+                        <p>We are also able to successfully build an object detection algorithm that'll navigate to areas of the software from any start point.</p>
                       </div>
                     </div>
                   </div>
-                  <img id="sonyDiagram" src="img/techdiagram.png" style="min-width: 400px; object-fit: contain; width: 1100px; margin-top: 20px; margin-bottom: 20px" alt="System Architecture Diagram">
+                  <img class="SONY-system-architecture" src="img/techdiagram.png" alt="System Architecture Diagram">
                 </div>
-                <button id="sonyHostedDiagram" style="width: 300px; margin: 0 auto;" class="btn btn-outline-light" onclick="location.href='https://ams03pap003files.storage.live.com/y4mm2R4KwUSpGkjAZ-2CHnNQxKQx8f1ycdVUxZqoIiw6PcyP1G-m0qBOLJXYsZM6c867msluz-vLuPwvYjHdp3wmOJoRjrzuER8QV2VbdEMHSkSVZom8DpLw4RG94b4mTwulCbJH4QkEbUHczrsBktFBeswgR5Q5NSxOe5FU4u3KjOU1gFGIGbHsY7ACfr4FCtq?width=1604&height=828&cropmode=none'">System Architecture Diagram</button>
+                <button id="SONY-hosted-system-architecture" class="btn btn-outline-light" onclick="location.href='https://ams03pap003files.storage.live.com/y4mm2R4KwUSpGkjAZ-2CHnNQxKQx8f1ycdVUxZqoIiw6PcyP1G-m0qBOLJXYsZM6c867msluz-vLuPwvYjHdp3wmOJoRjrzuER8QV2VbdEMHSkSVZom8DpLw4RG94b4mTwulCbJH4QkEbUHczrsBktFBeswgR5Q5NSxOe5FU4u3KjOU1gFGIGbHsY7ACfr4FCtq?width=1604&height=828&cropmode=none'">System Architecture Diagram</button>
                 <hr class="new4">
-                <h2 style="margin-bottom: 20px; margin-top: 10px;">Office Depot UK</h2>
+                <h2>Office Depot UK</h2>
                 <p>Work experience at Office Depot's Digital Innovation Center</p>
                 <p>Milton Keynes, England</p>
                 <p class="muted">July 2018</p>
-                <p style="margin-top: 20px">During this work experience, I introduced to various departments including DevOps, Front-End Web Development and Cyber-Security at Office Depot's Digital Innovation Centre.</p>
-                <p style="margin-top: 20px">I learnt about their workflows and how each department is linked together. This experience was the start of my ambition to make </p>
+                <p class="twenty-top-margin">During this work experience, I introduced to various departments including DevOps, Front-End Web Development and Cyber-Security at Office Depot's Digital Innovation Centre.</p>
+                <p class="twenty-top-margin">I learnt about their workflows and how each department is linked together. This experience was the start of my ambition to make </p>
           </div>
           <div class="portfolio_tabcontent" id="TechStack">
-            <h2 class="typewriter" style="--n:14">Technology Stack</h2>
+            <h2 class="typewriter">Technology Stack</h2>
             <div class="flex-col">
-              <h3 class="typewriter" style="--n:14">Core languages</h3>
+              <h3 class="typewriter">Core languages</h3>
               <div class="tech-icons-flex-row">
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/python.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Python</h4>
+                    <h4>Python</h4>
                     <p class="muted">I developed Sony's machine learning testing tool and the Django backend of the project using Python. This is my strongest core language.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/java.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Java</h4>
+                    <h4>Java</h4>
                     <p class="muted">Was taught Object-Oriented Java at University and built on this knowledge when learning the foundations of Kotlin.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/javascript.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">JavaScript</h4>
+                    <h4>JavaScript</h4>
                     <p class="muted">Strong knowledge of JavaScript from building Sony's web application with React.js as well as writing my own websites.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/kotlin.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Kotlin</h4>
-                    <p class="muted" style="margin-bottom: 10px">Learnt good foundation of Kotlin since I began developing a mobile application with it as a project.</p>
+                    <h4>Kotlin</h4>
+                    <p class="muted ten-bottom-margin">Learnt good foundation of Kotlin since I began developing a mobile application with it as a project.</p>
                     <a href="https://github.com/toby-j/BeautyTruth">BeautyTruth Repo</a>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/csharp.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">C#</h4>
+                    <h4>C#</h4>
                     <p class="muted">Learnt a good foundation while working with some of Sony's internal Windows tools.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/swift.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Swift</h4>
-                    <p class="muted">Followed an Model View ViewModel (MVVM) architecture when I developed the barcode scanner for my mobile application BeautyTruth.</p>
+                    <h4>Swift</h4>
+                    <p class="muted">Followed a Model View ViewModel (MVVM) architecture when I developed the barcode scanner for my mobile application BeautyTruth.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/html5.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">HTML</h4>
+                    <h4>HTML</h4>
                     <p class="muted">Confident in HTML from writing my own websites and using .tsx with Sony's web application.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/css.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">CSS</h4>
+                    <h4>CSS</h4>
                     <p class="muted">Taught myself when writing my own websites. Used flexbox and CSS moduels for Sony's web application.</p>
                   </div>
                 </div>
               </div>
-              <h3 class="typewriter" style="--n:35">Frameworks, libraries and supersets</h3>
+              <h3 class="typewriter" >Frameworks, libraries and supersets</h3>
               <div class="tech-icons-flex-row">
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/django.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Django</h4>
+                    <h4>Django</h4>
                     <p class="muted">Confident working with this framework after using it to build the backend of the Sony's web application.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/DRF.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Django Rest Framework</h4>
+                    <h4>Django Rest Framework</h4>
                     <p class="muted">Created multiple endpoints to serialise results from the Python tool into the SQL database and Views that process the raw data to derive useful insights which are then visualised on the front-end.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/react.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">React.js</h4>
+                    <h4>React.js</h4>
                     <p class="muted">Learnt the basics of React and using .tsx with a University project, but I've built on this knowledge significantly building the Sony web application.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/sass.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">SASS/SCSS</h4>
+                    <h4>SASS/SCSS</h4>
                     <p class="muted">Used SASS/SCSS to help organise the front-end of the Sony web application.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/blueprint.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Blueprint.js</h4>
+                    <h4>Blueprint.js</h4>
                     <p class="muted">Sony's web application was a data-heavy desktop application and Blueprint.js provided just what I needed. I used Table, Select, MultiSelect and multiple core components.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/typescript.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">TypeScript</h4>
+                    <h4>TypeScript</h4>
                     <p class="muted">With the Sony web application, I frequently used TypeScript when serialising returned data from requests that front-end would make to the two databases.</p>
                   </div>
                 </div>
               </div>
-              <h3 class="typewriter" style="--n:15">Version Control</h3>
+              <h3 class="typewriter">Version Control</h3>
               <div class="tech-icons-flex-row">
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/git.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Git</h4>
+                    <h4>Git</h4>
                     <p class="muted">Have always used Git for my projects, University and at my time at Sony.</p>
                   </div>
                 </div>
               </div>
-              <h3 class="typewriter" style="--n:9">Databases</h3>
+              <h3 class="typewriter">Databases</h3>
               <div class="tech-icons-flex-row">
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/postgresql.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">PostgreSQL</h4>
+                    <h4>PostgreSQL</h4>
                     <p class="muted">During my time at Sony, I helped to design the relational schema from scratch to store the results of the test. As well as related data about a test Sony could use to investigate potential issues.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/mongodb.svg" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">MongoDB</h4>
+                    <h4>MongoDB</h4>
                     <p class="muted">At Sony, I used MongoDB to store items that the front-end would load into React.js components. For example, drop-down menus like Select from Blueprint.js. This allows for non-technical personnel to edit the data that's served to these React components using a UI.</p>
                   </div>
                 </div>
@@ -318,26 +316,26 @@
               <div class="tech-icon-con">
                 <div>
                   <img src="img/tech-icons/docker.png" class="tech-icon">
-                  <h4 style="margin-top: 15px; margin-bottom: 10px">Docker</h4>
+                  <h4>Docker</h4>
                   <p class="muted">Containerized our Python application and deployed it one of Sony's Windows machines other internal apps installed.</p>
                 </div>
               </div>
               <h3>Cloud Services</h3>
-              <div class="tech-icon-con" style="width: auto">
+              <div class="tech-icon-con aws">
                 <div>
-                  <img src="img/tech-icons/aws.png" class="tech-icon" style="max-height: 60px">
-                  <h4 style="margin-top: 15px; margin-bottom: 10px">Amazon Web Services</h4>
-                  <p class="muted">For the Software Engineering module in Year 2, we needed to build a web application in groups. For our project, we used:</p>
-                  <p style="margin-top: 10px; margin-bottom: 10px">Elastic Beanstalk</p>
-                  <p style="margin-top: 10px; margin-bottom: 10px" class="muted">We used BitBucket Pipelines to containerise our web application and deploy it to our Elastic Beanstalk environment.</p>
+                  <img src="img/tech-icons/aws.png" class="tech-icon" >
+                  <h4>Amazon Web Services</h4>
+                  <p class="muted ten-top-bottom-margins">For the Software Engineering module in Year 2, we needed to build a web application in groups. For our project, we used:</p>
+                  <p>Elastic Beanstalk</p>
+                  <p class="muted ten-top-bottom-margins">We used BitBucket Pipelines to containerise our web application and deploy it to our Elastic Beanstalk environment.</p>
                   <p>Lambda</p>
-                  <p style="margin-top: 10px; margin-bottom: 10px" class="muted">To make periodic corrections to our MongoDB database.</p>
+                  <p class="muted ten-top-bottom-margins">To make periodic corrections to our MongoDB database.</p>
                   <p>EC2</p>
-                  <p style="margin-top: 10px; margin-bottom: 10px" class="muted">Our application was hosted on an EC2 instance which we integrated with our NGINX reverse proxy.</p>
+                  <p class="muted ten-top-bottom-margins">Our application was hosted on an EC2 instance which we integrated with our NGINX reverse proxy.</p>
                   <p>Cognito</p>
-                  <p style="margin-top: 10px; margin-bottom: 10px" class="muted">To handle our user authentication</p>
-                  <p style="margin-top: 20px">When I was developing my mobile application BeautyTruth, I used the Amplify Framework.</p>
-
+                  <p class="muted ten-top-bottom-margins">To handle our user authentication</p>
+                  <span/>
+                  <p class="ten-top-bottom-margins">When I was developing my mobile application BeautyTruth, I used the Amplify Framework.</p>
                 </div>
               </div>
               <h3>Platforms</h3>
@@ -345,14 +343,14 @@
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/windows.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Windows</h4>
+                    <h4>Windows</h4>
                     <p class="muted">Worked on Windows Server 2019 when I was developing with some of Sony's C# internal apps.</p>
                   </div>
                 </div>
                 <div class="tech-icon-con">
                   <div>
                     <img src="img/tech-icons/linux.png" class="tech-icon">
-                    <h4 style="margin-top: 15px; margin-bottom: 10px">Linux</h4>
+                    <h4>Linux</h4>
                     <p class="muted">At Sony, I designed the development environment to run our Python application. This involved building some legacy software to control the project's hardware. I also set up the networking of each Linux machine to meet Sony's network requirements.</p>
                   </div>
                 </div>
@@ -360,26 +358,26 @@
             </div>
           </div>
           <div class="portfolio_tabcontent" id="Projects">
-            <div class="flex-col" style="margin-bottom: 20px; margin-top: 30px;">
+            <div class="flex-col thirty-top-bottom-margin">
               <div>
-                <div style="text-align: center; float: left">
-                  <img style="margin-top: 10px" src="img/project-icons/panda.png" class="project-icon">
-                  <p style="font-family: Varela Round, sans-serif; margin-top: 10px; font-size: 30pt">BePanda</p>
+                <div class="bepanda-container">
+                  <img src="img/project-icons/panda.png" class="project-icon ten-top-margin">
+                  <p class="bepanda-text">BePanda</p>
                 </div>
               </div>
             </div>
             <p class="muted">Small project selling reusable drink flasks and cups</p>
             <p class="muted">Oct 2018 - Present</p>
-            <p style="margin-top: 25px">Founded by myself, I wanted to provide people with an alternative to single use plastic coffee cups.</p>
+            <p class="thirty-top-margin">Founded by myself, I wanted to provide people with an alternative to single use plastic coffee cups.</p>
             <p>I designed and branded two products and shared profits with a plastic pollution charity.</p>
-            <p style="margin-bottom: 30px">I've sold them in local garden centers and are available online.</p>
-            <button class="btn btn-outline-light" onclick="location.href='https://bepanda.co.uk/'">View Website</button>
-            <div class="flex-col" style="margin-bottom: 20px; margin-top: 30px;">
+            <p class="thirty-bottom-margin">I've sold them in local garden centers and are available online.</p>
+            <button id="bepanda-website-btn" class="btn btn-outline-light">View Website</button>
+            <div class="flex-col thirty-top-bottom-margin">
               <div>
-                <div style="text-align: center; float: left">
-                  <div class="flex-col" style="align-items: center">
-                    <img style="margin-top: 10px" src="img/project-icons/btlogo.png" class="project-icon">
-                    <img style="margin-top: 10px; width: 215px" src="img/project-icons/bttext.png" class="project-icon">
+                <div class="bt-container">
+                  <div class="flex-col bt-col">
+                    <img src="img/project-icons/btlogo.png" class="project-icon bt-text ten-top-margin">
+                    <img src="img/project-icons/bttext.png" class="project-icon bt-text ten-top-margin">
                   </div>
                 </div>
               </div>
@@ -387,27 +385,27 @@
             <h4 class="muted">“To accelerate the transition to natural and ethical cosmetic products”</h4>
             <p class="muted">A mobile application to analyse ingredients on beauty products.</p>
             <p class="muted">April 2021 - July 2021</p>
-            <p style="margin-top: 25px">Started by me and some friends at university, we wanted to increase the convenience and confidence for consumers in identifying natural and ethical cosmetic products.</p>
+            <p class="twenty-top-margin">Started by me and some friends at university, we wanted to increase the convenience and confidence for consumers in identifying natural and ethical cosmetic products.</p>
             <p>I developed a barcode scanner in Swift that would fetch from a product database and display product information. I picked a database by a company called <a class="light-link" href="https://digit-eyes.com/">Digit-Eyes</a> which owns a database in Texas which stores data on millions of barcodes and updates the data by scraping the product webpage.</p>
             <p>However, I made the decision to pause development on BeautyTruth to focus on my placement at Sony.</p>
             <h3>Resources</h3>
-            <button class="btn btn-outline-light" onclick="location.href='https://ams03pap003files.storage.live.com/y4mQVJLZRIf1yE1F4O0iTfhUi-IuRphS90nb0MfUAwEiPaiB1aF6udMtz9O4NopcOnbDMYbW-g67pP3bhEF2-vC7Lqc0ygJBAC4tD7unjcPNSZQh9yaWEQl7TLHiyJ0ID_dEn-CwifZGeIdfm07shgv-ByGjZqYCSsatiwZd3QzzsBG4wZUrhNVBifRfpshZJe0?width=1143&height=1642&cropmode=none'">Cloud Architecture</button>
-            <button class="btn btn-outline-light" onclick="location.href='https://ams03pap003files.storage.live.com/y4my0sC_U30GQ3-0JB400U53-s3CbG7nXq7HH9y83KwzZPyVLsEcezbFz-K83aY8caaPunMkrNByIsmxNMTCHi-_QmEqZ6gNIaaXIcsAfgwcL_R5HUYctquxj2yGUx7Gd3VIUNx2OgB2mAwLlysbt5bCcismaE64jnbc_u_HlVEAqvYPT0E7Hwpo-_yxC-Ybgy1?width=1502&height=2291&cropmode=none'">Flow Diagram</button>
-            <button class="btn btn-outline-light" onclick="location.href='https://ams03pap003files.storage.live.com/y4mJvRirx8vTrsr5iEyDaFSqGCWqS3VAYcp__H52RL27fZYSaotxeL-emw0PLeQiDdgFYKgg9Lbwp_t0RkWaQOQfA2ucKEl3W1iXeFoaY1_yLALNfd0d7G00nM_0ixpDu3U1CcsHM0T7kOpxpLJbZl8Of3uoqAw7P4eTw1rSTbvw4twIMYOhEZIETv0T-BWNS7G?width=1401&height=1343&cropmode=none'">UI Designs</button>
-            <button class="btn btn-outline-light" onclick="location.href='https://ams03pap003files.storage.live.com/y4m-rSuf1vu5Noy_P0G_AhT2j0CnoL8Dr8ZDbeOd10vPb_8_R1Dqdzd1LApgZUCFfC1hb7UMIwZpQvxihBWkXOlpc7sybARUrDYcIInNC82kCy6VvULOewPkBiS621JxWZbs81yiau0sxLbvV-10cUGthdWajmhEmMg989W0_9JnhukFxZMqEbkEpVgVGw9XQts?width=717&height=1273&cropmode=none'">Barcode Scanner Screenshot</button>
+            <button class="btn btn-outline-light" id="bt-cloud-architecture-btn">Cloud Architecture</button>
+            <button class="btn btn-outline-light" id="bt-flow-diagram-btn">Flow Diagram</button>
+            <button class="btn btn-outline-light" id="bt-ui-designs-btn">UI Designs</button>
+            <button class="btn btn-outline-light" id="bt-barcode-scanner-btn">Barcode Scanner Screenshot</button>
           </div>
           <div class="portfolio_tabcontent" id="Education">
-            <div style="float: left; margin-top: 50px;">
+            <div class="timeline-section">
               <div class="timeline">
                 <div class="timeline-container right">
                   <div class="timeline-content">
-                    <img src="img/education-icons/surrey.png" class="education-icon">
-                    <h2 style="margin-top: 10px; margin-bottom: 20px; --n:20" class="typewriter">University of Surrey</h2>
+                    <img src="img/education-icons/surrey.png" class="education-icon" alt="surrey logo">
+                    <h2 class="typewriter">University of Surrey</h2>
                     <p>Bachelor's degree, Computer Science and Information Technology BSc</p>
                     <p>With Professional Training Year</p>
                     <p class="muted">2019 - 2023</p>
-                    <h3 class="typewriter" style="margin-top: 80px; margin-bottom: 10px; --n:6">Year 4</h3>
-                    <p style="margin-bottom: 20px" class="muted">2022 - 2023</p>
+                    <h3 class="typewriter">Year 4</h3>
+                    <p class="twenty-bottom-margin muted">2022 - 2023</p>
                     <div class="flex-col">
                       <div class="flex-row">
                         <p class="muted">Deep Learning and Advanced AI</p>
@@ -434,12 +432,12 @@
                         <p>Pending</p>
                       </div>
                     </div>
-                    <h3 class="typewriter" style="margin-top: 80px; margin-bottom: 10px; --n:26">Professional Training Year</h3>
-                    <p style="margin-bottom: 20px" class="muted">2021 - 2022</p>
-                    <h4 style="margin-bottom: 5px">Sony Professional Solutions Europe</h4>
+                    <h3 class="typewriter">Professional Training Year</h3>
+                    <p class="twenty-bottom-margin muted">2021 - 2022</p>
+                    <h4>Sony Professional Solutions Europe</h4>
                     <p class="muted">Software Engineer Intern</p>
-                    <h3 class="typewriter" style="margin-top: 80px; margin-bottom: 10px">Year 2</h3>
-                    <p style="margin-bottom: 20px" class="muted">2020 - 2021</p>
+                    <h3 class="typewriter">Year 2</h3>
+                    <p class="muted twenty-bottom-margin">2020 - 2021</p>
                     <div class="flex-col">
                       <div class="flex-row">
                         <p class="muted">Computer Networking</p>
@@ -477,12 +475,12 @@
                       </div>
                     </div>
                     <div class="flex-row">
-                      <h4 class="typewriter" style="--n:5">Total</h4>
+                      <h4 class="typewriter">Total</h4>
                       <h4>73.75%</h4>
                     </div>
-                    <p class="muted" style="float: right">No resits</p>
-                    <h3 style="margin-top: 80px; margin-bottom: 10px; --n:6" class="typewriter">Year 1</h3>
-                    <p style="margin-bottom: 20px" class="muted">2019 - 2020</p>
+                    <p class="muted float-right">No resits</p>
+                    <h3 class="typewriter">Year 1</h3>
+                    <p class="muted twenty-bottom-margin">2019 - 2020</p>
                     <div class="flex-col">
                       <div class="flex-row">
                         <p class="muted">Web And Database Systems</p>
@@ -523,16 +521,16 @@
                       <h4>Total</h4>
                       <h4>70.25%</h4>
                     </div>
-                    <p class="muted" style="float: right">No resits</p>
+                    <p class="muted float-right">No resits</p>
                   </div>
                 </div>
                 <div class="timeline-container right">
                   <div class="timeline-content">
                     <img src="img/education-icons/bhasvic.png" class="education-icon">
-                    <h2 style="margin-top: 10px; margin-bottom: 20px; --n:42" class="typewriter">Brighton, Hove & Sussex Sixth Form College</h2>
-                    <p style="margin-bottom: 10px">Sixth form college</p>
+                    <h2 class="typewriter">Brighton, Hove & Sussex Sixth Form College</h2>
+                    <p class="ten-bottom-margin">Sixth form college</p>
                     <p class="muted">2016 - 2018</p>
-                    <div class="flex-col" style="margin-top: 20px">
+                    <div class="flex-col twenty-top-margin">
                       <div class="flex-row">
                         <p class="muted">Computer Science A Level</p>
                         <p>B</p>
@@ -555,10 +553,10 @@
                 <div class="timeline-container right">
                   <div class="timeline-content">
                     <img src="img/education-icons/downlands.png" class="education-icon">
-                    <h2 style="margin-top: 10px; margin-bottom: 20px; --n:26" class="typewriter">Downlands Community School</h2>
-                    <p style="margin-bottom: 10px">Secondary School</p>
+                    <h2 class="typewriter">Downlands Community School</h2>
+                    <p class="ten-bottom-margin">Secondary School</p>
                     <p class="muted">2011 - 2016</p>
-                    <div class="flex-col" style="margin-top: 20px">
+                    <div class="flex-col twenty-top-margin">
                       <div class="flex-row">
                         <p class="muted">GCSEs Including Maths and English </p>
                         <p>A-C</p>
@@ -573,7 +571,6 @@
         </div>
       </div>
     </div>
-  </div>
   <div class="footer">
     <p>Made by Toby Johnson</p>
   </div>
