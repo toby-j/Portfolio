@@ -23,11 +23,11 @@ h2 {
   font-weight: 400;
   margin-bottom: 20px;
   margin-top: 10px;
-  --n:30
+  --n:50
 }
 
 h3 {
-  --n:20
+  --n:30
 }
 
 h1 {
@@ -168,6 +168,7 @@ p {
   position: relative;
   border-radius: 6px;
 }
+
 
 .vertLine {
   border-right: 1px solid red;
