@@ -198,6 +198,10 @@ p {
   flex-wrap: wrap;
 }
 
+#pathvision-btn {
+  margin-left: 0;
+  margin-top: 15px;
+}
 
 .navigation-container {
   margin-top: 20px;
