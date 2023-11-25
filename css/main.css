@@ -418,6 +418,12 @@ hr.new4 {
   padding: 100px;
 }
 
+/* Typography */
+
+.bright-text {
+  color: dodgerblue;
+}
+
 /*Name Section*/
 
 .name-container {
