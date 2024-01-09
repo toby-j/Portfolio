@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
@@ -209,9 +212,15 @@ p {
 }
 
 /*Arrow bullet points*/
+
+.arrowBullets {
+  margin-top: 30px;
+}
+
 .arrowBullets ul li {
   position: relative;
   padding-bottom: 10px;
+  margin-top: 15px;
 }
 
 .arrowBullets ul {
@@ -221,8 +230,8 @@ p {
 .arrowBullets ul li:before{
   content: '';
   position: absolute;
-  border-right:3px solid white;
-  border-bottom:3px solid white;
+  border-right:2px solid white;
+  border-bottom:2px solid white;
   width:10px;
   height:10px;
   top: calc(50% - 4px);
@@ -328,12 +337,6 @@ a {
 #socials a {
   color: #f6f7f9;
   transition: 0.3s;
-}
-
-#SONY-hosted-system-architecture {
-  width: 300px;
-  margin: 0 auto;
-  display: none;
 }
 
 .light-link {
@@ -571,7 +574,7 @@ hr {
 }
 
 .SONY-Section {
-  max-width: 700px
+  max-width: 900px
 }
 
 .SONY-Section h3 {
